@@ -7,15 +7,44 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+ 
 </head>
 <body>
+
+ <!-- MENU BURGER POUR TOUS LES ÉCRANS -->
+<div class="burger-menu">
+  <button id="burgerToggle" class="btn btn-dark mb-3">
+    <i class="bi bi-list"></i>
+  </button>
+  <div id="burgerContent" class="burger-nav-links" style="display: none;">
+    <div class="profile text-center mb-3">
+      <img src="img/im1.png" alt="Photo de profil" class="rounded-circle mb-2">
+      <h2>Wissam ADJASSA</h2>
+      <p>Étudiante en Développement Web</p>
+    </div>
+    <nav class="nav flex-column text-center">
+      <a href="#home" class="nav-link text-light active"><i class="bi bi-house-door-fill me-2"></i> Accueil</a>
+      <a href="#about" class="nav-link text-light"><i class="bi bi-person-fill me-2"></i> À propos</a>
+      <a href="#projects" class="nav-link text-light"><i class="bi bi-kanban-fill me-2"></i> Projets</a>
+      <a href="#compétences" class="nav-link text-light"><i class="bi bi-kanban-fill me-2"></i> Compétences</a>
+      <a href="#contact" class="nav-link text-light"><i class="bi bi-envelope-fill me-2"></i> Contact</a>
+    </nav>
+    <div class="socials mt-3 d-flex justify-content-center gap-3">
+      <a href="#" class="text-primary fs-4"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="text-primary fs-4"><i class="bi bi-github"></i></a>
+      <a href="#" class="text-primary fs-4"><i class="bi bi-file-earmark-person"></i></a>
+    </div>
+  </div>
+</div>
   <div class="container">
+    
     <!-- MENU VERTICAL -->
     <aside class="sidebar">
       <div class="profile">
         <img src="img/im1.png" alt="Photo de profil" class="rounded-circle border border-primary mb-2">
         <h2>Wissam ADJASSA</h2>
-        <p>Étudiante en Développement Web</p>
+        <p>Développeuse full stack</p>
       </div>
       <nav class="nav">
         <a href="#home" class="nav-link text-light active"><i class="bi bi-house-door-fill me-2"></i> Accueil</a>
@@ -26,9 +55,8 @@
       </nav>
       </nav>
       <div class="socials">
-        <a href="#" class="text-primary fs-4"><i class="bi bi-linkedin"></i></a>
-        <a href="#" class="text-primary fs-4"><i class="bi bi-github"></i></a>
-        <a href="#" class="text-primary fs-4"><i class="bi bi-file-earmark-person"></i></a>
+        <a href="https://github.com/Wissam-Adjassa" class="text-primary fs-4"><i class="bi bi-github"></i></a>
+        
       </div>
     </aside>
 
@@ -40,7 +68,6 @@
         <p>Étudiante en développement web passionnée par le front-end et le back-end.</p>
         <div class="buttons">
           <a href="#projects" class="btn">Voir mes projets</a>
-          <a href="#" class="btn-outline">Télécharger mon CV</a>
         </div>
       </section>
 
@@ -48,14 +75,11 @@
       <section id="about" class="section">
         <h2>À propos</h2>
         <p>
-          Je suis étudiante en Bachelor Développement Web à l’IESIG. J’aime créer des sites modernes,
-          performants et intuitifs. Mon objectif est de devenir développeur full stack.
+          Je suis Wissam ADJASSA, étudiante en Développement Web passionnée par la création de sites
+          modernes, performants et intuitifs. Je maîtrise le HTML, CSS, JavaScript, PHP ainsi que
+          l’utilisation de bases de données pour développer des projets complets, du front-end au back-end. Mon objectif est de devenir développeuse full stack et de travailler sur des projets innovants qui allient design et fonctionnalité.
         </p>
-        <ul>
-          <li><i class="bi bi-code-slash me-2"></i> HTML, CSS, JavaScript, React</li>
-          <li><i class="bi bi-gear-fill me-2"></i> PHP, MySQL, Node.js</li>
-          <li><i class="bi bi-diagram-3-fill me-2"></i> Git, Figma, API REST</li>
-        </ul>
+        
       </section>
 
       <!-- Projets -->
@@ -66,26 +90,26 @@
             <img src="img/imgpro1.jpg" alt="Basket Shop">
             <div class= "cardContent">
               <h2> Basket Shop</h2> 
-              <p>Site e-commerce développé en PHP MVC avec gestion du panier et paiement.</p>
-              <a class="btn btn-dark" href="">Découvrer le projet</a>
+              <p>E-commerce pour vendre des baskets en ligne.</p>
+              <a class="btn btn-dark" href="basket.html">Découvrir le projet</a>
+            </div>
+
+          </div>
+          <div class="cardItem">
+            <img src="img/imgpro3.jpg" alt="Basket Shop">
+            <div class= "cardContent">
+              <h2> Location de Véhicules</h2> 
+              <p>Site de location des voitures avec réservation en ligne.</p>
+              <a class="btn btn-dark" href="vehicule.html">Découvrir le projet</a>
             </div>
 
           </div>
           <div class="cardItem">
             <img src="img/imgpro2.jpg" alt="Basket Shop">
             <div class= "cardContent">
-              <h2> Basket Shop</h2> 
-              <p>Site e-commerce développé en PHP MVC avec gestion du panier et paiement.</p>
-              <a class="btn btn-dark" href="">Découvrer le projet</a>
-            </div>
-
-          </div>
-          <div class="cardItem">
-            <img src="img/imgpro1.jpg" alt="Basket Shop">
-            <div class= "cardContent">
-              <h2> Basket Shop</h2> 
-              <p>Site e-commerce développé en PHP MVC avec gestion du panier et paiement.</p>
-              <a class="btn btn-dark" href="">Découvrer le projet</a>
+              <h2> Portfolio</h2> 
+              <p>Présentation de mes compétences et projets </p>
+              <a class="btn btn-dark" href="#">Découvrir le projet</a>
             </div>
 
           </div>
@@ -128,6 +152,12 @@
     </main>
 
   </div>
+
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <!-- Script externe -->
   <script src="script.js"></script>

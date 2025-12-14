@@ -1,4 +1,5 @@
 /* ===================== RESET ===================== */
+/* Réinitialisation des marges, paddings et du box-sizing pour un rendu cohérent */
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +7,14 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Style global du body */
 body {
   background-color: #ffffff;
   color: #d1c6c6;
 }
 
 /* ===================== LAYOUT GLOBAL ===================== */
+/* Conteneur principal qui englobe la sidebar et le contenu */
 .container {
   display: flex;
   min-height: 100vh;
@@ -19,6 +22,7 @@ body {
 }
 
 /* ===================== SIDEBAR ===================== */
+/* Sidebar fixe à gauche */
 .sidebar {
   width: 260px;
   background-color: #2C2C2C;
@@ -32,36 +36,42 @@ body {
   bottom: 0;
 }
 
-/* Profil */
+/* ===================== PROFIL ===================== */
+/* Zone profil (photo + nom + rôle) */
 .profile {
   text-align: center;
 }
 
+/* Image de profil circulaire */
 .profile img {
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  border: 3px solid #F87171; /* rose rouge */
+  border: 3px solid #F87171;
   margin-bottom: 10px;
 }
 
+/* Nom */
 .profile h2 {
   color: #F87171;
   font-size: 1.3rem;
 }
 
+/* Description */
 .profile p {
   font-size: 0.9rem;
   color: #ddd;
 }
 
-/* Navigation */
+/* ===================== NAVIGATION ===================== */
+/* Menu de navigation vertical */
 .nav {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+/* Liens de navigation */
 .nav a {
   text-decoration: none;
   padding: 10px 12px;
@@ -72,13 +82,15 @@ body {
   transition: 0.3s;
 }
 
+/* Effet hover et lien actif */
 .nav a:hover,
 .nav a.active {
   background-color: #F87171;
   color: #fff;
 }
 
-/* Réseaux sociaux */
+/* ===================== RÉSEAUX SOCIAUX ===================== */
+/* Icônes des réseaux sociaux */
 .socials {
   display: flex;
   justify-content: center;
@@ -91,22 +103,26 @@ body {
   transition: 0.3s;
 }
 
+/* Effet au survol */
 .socials a:hover {
   color: #EF4444 !important;
 }
 
 /* ===================== CONTENU PRINCIPAL ===================== */
+/* Zone principale du site */
 .content {
-  margin-left: 260px; /* laisse la sidebar fixe */
+  margin-left: 260px; /* espace laissé pour la sidebar */
   padding: 30px;
   width: calc(100% - 260px);
 }
 
+/* Espacement entre les sections */
 .section {
   margin-bottom: 70px;
 }
 
 /* ===================== TITRES ===================== */
+/* Titres de sections */
 .section h2 {
   font-size: 2rem;
   text-align: center;
@@ -115,6 +131,7 @@ body {
   position: relative;
 }
 
+/* Ligne décorative sous les titres */
 .section h2::after {
   content: "";
   display: block;
@@ -125,15 +142,18 @@ body {
   border-radius: 2px;
 }
 
+/* Animation d’apparition des titres */
 .section h2 {
   animation: fadeInTitle 0.8s ease-out;
 }
 
+/* Keyframes de l’animation */
 @keyframes fadeInTitle {
   0% { opacity: 0; transform: translateY(-10px);}
   100% { opacity: 1; transform: translateY(0);}
 }
 
+/* Premier paragraphe de chaque section */
 .section p:first-of-type {
   font-weight: 500;
   font-size: 1.1rem;
@@ -142,25 +162,30 @@ body {
 }
 
 /* ===================== ACCUEIL ===================== */
+/* Titre principal */
 #home h1 {
   font-size: 3rem;
   margin-bottom: 10px;
 }
 
+/* Mise en valeur du texte */
 #home span {
   color: #F87171;
 }
 
+/* Texte d’introduction */
 #home p {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
 
+/* Conteneur des boutons */
 .buttons {
   display: flex;
   gap: 20px;
 }
 
+/* Bouton principal */
 .btn {
   background-color: #F87171;
   color: white;
@@ -171,10 +196,12 @@ body {
   transition: 0.3s;
 }
 
+/* Effet hover bouton */
 .btn:hover {
   background-color: #EF4444;
 }
 
+/* Bouton secondaire */
 .btn-outline {
   border: 2px solid #F87171;
   color: #F87171;
@@ -184,12 +211,14 @@ body {
   transition: 0.3s;
 }
 
+/* Effet hover bouton secondaire */
 .btn-outline:hover {
   background-color: #F87171;
   color: white;
 }
 
 /* ===================== À PROPOS ===================== */
+/* Section à propos */
 #about {
   background-color: #2F2F2F;
   padding: 25px;
@@ -197,6 +226,7 @@ body {
 }
 
 /* ===================== PROJETS ===================== */
+/* Conteneur des cartes projets */
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -204,29 +234,34 @@ body {
   justify-content: flex-start;
 }
 
+/* Carte projet */
 .cardItem {
   background-color: #3A3A3A;
-  width: 320px; 
+  width: 315px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+/* Image du projet */
 .cardItem img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
+/* Contenu texte de la carte */
 .cardContent {
   padding: 15px;
 }
 
+/* Titre du projet */
 .cardContent h2 {
   color: #F87171;
   margin-bottom: 10px;
 }
 
+/* Bouton projet */
 .btnProject {
   text-decoration: none;
   display: inline-block;
@@ -238,21 +273,25 @@ body {
   transition: 0.3s;
 }
 
+/* Effet hover */
 .btnProject:hover {
   background-color: #EF4444;
 }
 
 /* ===================== COMPÉTENCES ===================== */
+/* Section compétences */
 #compétences {
   background-color: #2F2F2F;
   padding: 25px;
   border-radius: 10px;
 }
 
+/* Conteneur d’une compétence */
 .skillBox {
   margin-bottom: 12px;
 }
 
+/* Barre de compétence */
 .skills {
   height: 25px;
   border-radius: 6px;
@@ -263,17 +302,15 @@ body {
   font-weight: bold;
 }
 
-.skillsHtmlcss { background-color: #F87171; width: 95%; }
-.skillsJs { background-color: #F472B6; width: 90%; }
-.skillsPhp { background-color: #FBBF24; width: 85%; }
-
 /* ===================== CONTACT ===================== */
+/* Section contact */
 #contact {
   background-color: #2F2F2F;
   padding: 25px;
   border-radius: 10px;
 }
 
+/* Champs du formulaire */
 #contact input,
 #contact textarea {
   width: 100%;
@@ -285,6 +322,7 @@ body {
   margin-bottom: 15px;
 }
 
+/* Bouton envoyer */
 #contact button {
   background-color: #F87171;
   border: none;
@@ -295,31 +333,128 @@ body {
   font-weight: bold;
 }
 
+/* Effet hover */
 #contact button:hover {
   background-color: #EF4444;
 }
 
+/* ===================== MENU BURGER ===================== */
+/* Bouton menu burger */
+.burger-menu {
+  position: relative;
+  margin: 20px;
+  z-index: 1;
+}
+
+/* Menu déroulant */
+.burger-nav-links {
+  background-color: #2C2C2C;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: none;
+}
+
+/* Liens du burger */
+.burger-nav-links .nav a {
+  color: white;
+  margin: 5px 0;
+  display: block;
+  text-decoration: none;
+}
+
+/* Hover burger */
+.burger-nav-links .nav a:hover {
+  color: #F87171;
+}
+
+/* Réseaux sociaux dans le burger */
+.burger-nav-links .socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
 /* ===================== RESPONSIVE ===================== */
+/* Adaptation écrans ≤ 900px */
 @media (max-width: 900px) {
+
+  /* Masquer la sidebar */
   .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    gap: 15px;
+    display: none !important;
   }
 
+  /* Contenu pleine largeur */
   .content {
     margin-left: 0;
     width: 100%;
+    padding: 20px;
   }
 
+  /* Projets en colonne */
   .projects {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
   }
 
   .cardItem {
     width: 90%;
+    max-width: 400px;
   }
+
+  /* Navigation burger */
+  .nav {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .nav a {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  /* Réseaux sociaux */
+  .socials {
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  /* Barres de compétences */
+  .skillsHtmlcss,
+  .skillsJs,
+  .skillsPhp {
+    width: 100% !important;
+  }
+}
+
+/* ===================== ANIMATIONS COMPÉTENCES ===================== */
+/* État initial */
+.skillsHtmlcss,
+.skillsJs,
+.skillsPhp {
+  width: 0;
+  height: 20px;
+  background-color: #F87171;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Classes déclenchant l’animation */
+.animHtmlCss {
+  width: 90%;
+}
+
+.animJs {
+  width: 75%;
+}
+
+.animPhp {
+  width: 60%;
 }
